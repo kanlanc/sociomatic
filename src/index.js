@@ -11,18 +11,14 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/homepage">
-          <Route path="/" element={<Homepage />} />
-        </Route>
+        <Route path="/homepage" element={<Homepage />}></Route>
         {/* <Route path="/narwhal">
               <Narwhal />
             </Route>
             <Route path="/whale">
               <Whale />
             </Route> */}
-        <Route path="/">
-          <App />
-        </Route>
+        <Route path="/" element={<App />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
