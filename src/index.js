@@ -2,14 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
+import Homepage from "./components/Homepage";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path="/homepage">
+          <Route path="/" element={<Homepage />} />
+        </Route>
+        {/* <Route path="/narwhal">
+              <Narwhal />
+            </Route>
+            <Route path="/whale">
+              <Whale />
+            </Route> */}
+        <Route path="/">
+          <App />
+        </Route>
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

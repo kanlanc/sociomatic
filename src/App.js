@@ -1,13 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Route, Routes, Link, Switch, BrowserRouter } from "react-router-dom";
-import Homepage from "./components/Homepage";
+import { Route, Routes, Link, BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className="App">
-        {/* <header className="App-header">
+        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -20,23 +19,7 @@ function App() {
           >
             Learn React
           </a>
-        </header> */}
-        <BrowserRouter>
-          <Switch>
-            <Route path="/homepage">
-              <Homepage />
-            </Route>
-            {/* <Route path="/narwhal">
-              <Narwhal />
-            </Route>
-            <Route path="/whale">
-              <Whale />
-            </Route> */}
-            <Route path="/">
-              <Homepage />
-            </Route>
-          </Switch>
-        </BrowserRouter>
+        </header>
       </div>
     </>
   );
